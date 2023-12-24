@@ -4,6 +4,7 @@
   "description": "class 2 of namestay react. ",
   "main": "app.js",
   "scripts": {
+    "start": "parcel index.html",
     "test": "jest"
   },
   "repository": {

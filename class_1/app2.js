@@ -32,7 +32,7 @@ const heading = React.createElement("div", {}, [
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+// root.render will replace and not append.
 root.render(heading);
 
 console.log(heading);
