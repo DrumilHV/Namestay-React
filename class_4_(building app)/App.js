@@ -715,6 +715,7 @@ const Header = () => {
 };
 const RestaurantCard = ({ props }) => {
   props = props.info;
+
   // const {name, cloudinaryImageId, costForTwo , cuisines.join(", "), avgRating} = props?.;
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
@@ -722,13 +723,22 @@ const RestaurantCard = ({ props }) => {
         className="res-logo"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
+          props.cloudinaryImageId
         }
-        alt="dosa"
+        alt={props.name}
       />
-      <h3>{name}</h3>
-      <h4>{cuisines}</h4>
-      <h5>{avgRating} stars</h5>
+      <h3>
+        {props.name.length > 20
+          ? props.name.substring(0, 20) + "..."
+          : props.name.substring(0, 20)}
+      </h3>
+      <h4>{props.cuisines.join(", ").substring(0, 30) + "..."}</h4>
+
+      <div className="timeAndStars">
+        <h5 className="stars">{props.avgRating} stars</h5>
+        <h5 className="time">{props.sla.deliveryTime} mins</h5>
+      </div>
+
       {/* <h5>20 mins</h5> */}
     </div>
   );
@@ -736,9 +746,11 @@ const RestaurantCard = ({ props }) => {
 const Body = () => {
   return (
     <div className="body">
-      <div className="search">Search</div>
+      {/* <div className="search">Search</div> */}
       <div className="res-container">
-        <RestaurantCard />
+        {RestaurantData.map((restaurant) => (
+          <RestaurantCard props={restaurant} key={restaurant.info.id} />
+        ))}
       </div>
     </div>
   );

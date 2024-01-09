@@ -3,6 +3,10 @@
   justify-content: space-between;
   border: 1 solid black;
 }
+.app {
+  font-family: "Darker Grotesque", sans-serif;
+  font-weight: bold;
+}
 .logo {
   width: 200px;
   margin: 10px;
@@ -25,15 +29,20 @@
   margin: 5px;
   padding: 5px;
   width: 200px;
-  height: 300px;
+  height: 400px;
+  position: relative;
 }
 .res-card:hover {
   border: 1px solid black;
   cursor: pointer;
 }
 .res-container {
+  margin: 1%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: center;
 }
 .search {
   padding: 10px;
@@ -41,7 +50,24 @@
 .res-logo {
   width: 100%;
 }
-
+.timeAndStars {
+  display: flex;
+  justify-content: space-between;
+}
+.bottomTouch {
+  position: absolute;
+  bottom: 0%;
+}
+.time {
+  position: absolute;
+  bottom: 5%;
+}
+.stars {
+  position: absolute;
+  bottom: 1%;
+}
+.body {
+}
 /* // ----------------------++++++++++++++++++++++++++++++++++++----------------------++++++++++++++++++++++++++++++++++++----------------------++++++++++++++++++++++++++++++++++++ */
 /* 
 .logo {
