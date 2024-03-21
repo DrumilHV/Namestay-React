@@ -1,0 +1,7 @@
+DS_STORE
+node_modules
+.parcel-cache
+dist
+*.mdb
+.cache
+gitignore

@@ -1,0 +1,33 @@
+{
+  "name": "class_2",
+  "version": "1.0.0",
+  "description": "class 2 of namestay react. ",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrumilHV/Namestay-React.git"
+  },
+  "keywords": [
+    "React.js",
+    "npm",
+    "node",
+    "create-react-app"
+  ],
+  "author": "Drumil HV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrumilHV/Namestay-React/issues"
+  },
+  "homepage": "https://github.com/DrumilHV/Namestay-React#readme",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
