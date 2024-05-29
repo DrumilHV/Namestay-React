@@ -11,6 +11,7 @@ const Body = () => {
   const [RestaurantData, setRestaurantData] = useState([]);
   // const [PermRestaurantData, setPermRestaurantData] = useState([]);
   useEffect(() => {
+    console.log("useEffect Called!");
     fetchData();
   }, []);
 

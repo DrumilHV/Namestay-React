@@ -4,6 +4,7 @@ import LOGO_URL from "../../public/images/logo.svg";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+  console.log("header rendered! ");
   return (
     <div className="header">
       <div id="logo-container">
