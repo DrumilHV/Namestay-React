@@ -46,6 +46,7 @@ const Body = () => {
         setRestaurantData={setRestaurantData}
         event={all}
       />
+
       <div className="res-container">
         {RestaurantData.map((restaurant) => (
           <RestaurantCard props={restaurant} key={restaurant.info.id} />
