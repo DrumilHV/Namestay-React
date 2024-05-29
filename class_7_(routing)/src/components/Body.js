@@ -16,13 +16,13 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/mapi/homepage/getCards?lat=13.35120&lng=74.78000&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.30080&lng=73.20430"
     );
-    console.log("here", data);
+    // console.log("here", await data.json());
     let json = await data.json();
+    console.log("This is json\n", json);
     PermRestaurantData =
-      json.data.success.cards[1]?.gridWidget?.gridElements?.infoWithStyle
-        ?.restaurants;
+      json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
     console.log(PermRestaurantData);
 
     setRestaurantData(PermRestaurantData);
