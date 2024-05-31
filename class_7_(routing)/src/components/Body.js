@@ -4,6 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 import ShimmerUi from "./ShimmerUi";
 import { poplar, all } from "../../utils/filter";
 import Button from "./Button";
+import { API_URL } from "../../utils/constants";
 var PermRestaurantData;
 
 const Body = () => {
@@ -16,9 +17,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.30080&lng=73.20430"
-    );
+    const data = await fetch(API_URL);
     // console.log("here", await data.json());
     let json = await data.json();
     console.log("This is json\n", json);

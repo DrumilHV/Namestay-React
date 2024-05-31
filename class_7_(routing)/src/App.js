@@ -6,6 +6,7 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 /*
     Header
@@ -25,6 +26,7 @@ import Contact from "./components/Contact";
         -link
         -address
         -contacts
+
 */
 
 const AppLayout = () => {
@@ -53,6 +55,17 @@ const appRouter = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      { path: "/abc/:id", element: <About /> },
+      {
+        path: "/restaurant/:resName/:resId",
+        element: <RestaurantMenu />,
+      },
+
+      // Keep this route at the end itself or else it will club all the pages after it as /* , and render error page !! .
+      // {
+      //   path: "*",
+      //   element: <Error />,
+      // },
     ],
     errorElement: <Error />,
   },

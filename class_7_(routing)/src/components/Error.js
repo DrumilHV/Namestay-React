@@ -11,7 +11,9 @@ const Error = () => {
       <h1>Oops!!</h1>
       <h1>Something went Wrong!</h1>
       <h1>
-        {err.status} : {err.statusText}
+        {err
+          ? `${err.status} : ${err.statusText}`
+          : "An unexpected error occurred"}
       </h1>
     </>
   );
