@@ -2,11 +2,12 @@
 
 1. there are tow params to useEffect() hook, 1 st is callback function(mandatory), second is dependency array(optional).
 2. If there is no dependency array, then everytime you re-render the component the use effect will be called.
-3. If the dependency array is empty then the useEffect will be called only once after the inital render.
-4. If array has a var, useEffect will be called when the var changes (var can be state or non state).
-5. YOu can have multiple useEffects in a program.
-6. You can have props as dep arary and normal js vars.
-7. <strong>Every time you render the componnet, useEffect is called. Always called after the initial render.</strong>
+3. If the dependency array is empty then the useEffect will be called only once after the inital render .
+4. The basic nature of useEffect is to be called after each render.
+5. If array has a var, useEffect wilvl be called when the var changes (var can be state or non state).
+6. YOu can have multiple useEffects in a program.
+7. You can have props as dep arary and normal js vars.
+8. <strong>Every time you render the componnet, useEffect is called. Always called after the initial render.</strong>
 
 # useState()
 
@@ -97,3 +98,8 @@ root.render(<RouterProvider router={appRouter} />);
 1. When we switch page we do not make any network calls.
 2. This is also a reason why react is single apps are page applications. We dont have to send request for every page , we have the pages already loaded as components and we just interchange the components.
 3. If we make network calls it's server side routing.
+
+# Server Side Routing
+
+1. makes a call to server and gets the page and renders it.(coming from the server)
+2.
